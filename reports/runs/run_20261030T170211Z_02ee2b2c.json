@@ -1,0 +1,57 @@
+{
+  "run_id": "run_20261030T170211Z_02ee2b2c",
+  "input_hash": "02ee2b2c2bc6fa3d5d33ab2c2f19aeda1f29e314e241b4492d7ac508986d5e87",
+  "started_at": "2026-10-30T17:02:11.436695",
+  "as_of": "2026-01-01 00:00:00",
+  "status": "success",
+  "tables": {
+    "customers": {
+      "inserted_rows": 19600,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 20400,
+      "malformed_rows": 0,
+      "rejected_rows": 800,
+      "accepted_rows": 19600
+    },
+    "products": {
+      "inserted_rows": 980,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 1020,
+      "malformed_rows": 0,
+      "rejected_rows": 40,
+      "accepted_rows": 980
+    },
+    "orders": {
+      "inserted_rows": 196800,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 200800,
+      "input_rows": 205000,
+      "malformed_rows": 400,
+      "rejected_rows": 3800,
+      "accepted_rows": 200800
+    },
+    "order_items": {
+      "inserted_rows": 586109,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 601628,
+      "malformed_rows": 590,
+      "rejected_rows": 14929,
+      "accepted_rows": 586109
+    }
+  },
+  "warnings": [],
+  "failure_reason": null,
+  "ended_at": "2026-10-30T17:02:23.892377",
+  "duration_s": 12.456
+}

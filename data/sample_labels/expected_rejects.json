@@ -1,0 +1,41 @@
+{
+  "expected_rejects": {
+    "customers": {
+      "duplicate_key": 2,
+      "invalid_country": 1,
+      "missing_email": 1
+    },
+    "order_items": {
+      "duplicate_key": 9,
+      "invalid_order_ref": 6,
+      "invalid_product_ref": 9,
+      "invalid_quantity": 8,
+      "malformed_row_field_count": 3,
+      "missing_quantity": 1,
+      "parent_order_rejected": 38
+    },
+    "orders": {
+      "duplicate_key": 5,
+      "future_order_ts": 2,
+      "invalid_customer_ref": 5,
+      "invalid_order_ts": 2,
+      "invalid_status": 3,
+      "malformed_row_field_count": 2,
+      "missing_customer_id": 2
+    },
+    "products": {
+      "duplicate_key": 1,
+      "invalid_unit_price": 1,
+      "missing_category": 1
+    }
+  },
+  "input_rows": {
+    "customers": 102,
+    "order_items": 2946,
+    "orders": 1025,
+    "products": 21
+  },
+  "orders_requested": 1000,
+  "orders_updated_in_source": 20,
+  "seed": 42
+}

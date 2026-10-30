@@ -1,0 +1,45 @@
+╭─ Summary ───────────╮
+│ Total Time: 0.0024s │
+╰─────────────────────╯
+╭─ Projection ───────────────────────────────────╮
+│ Projections:                                   │
+│ #0, __internal_decompress_string(#1), #2       │
+│ 72 rows                                    0µs │
+╰────────────────────────┬───────────────────────╯
+╭─ Order By ─────────────┴───────────────────────╮
+│ Order By: month ASC, category ASC              │
+│ 72 rows                                    0µs │
+╰────────────────────────┬───────────────────────╯
+╭─ Projection ───────────┴───────────────────────╮
+│ Projections:                                   │
+│ #0, __internal_compress_string_uhugeint(#1),   │
+│ #2                                             │
+│ 72 rows                                    0µs │
+╰────────────────────────┬───────────────────────╯
+╭─ Projection ───────────┴───────────────────────╮
+│ Projections:                                   │
+│ #0, __internal_decompress_string(#1), #2       │
+│ 72 rows                                    0µs │
+╰────────────────────────┬───────────────────────╯
+╭─ Hash Group By ────────┴───────────────────────╮
+│ Groups: #0, #1                                 │
+│ Aggregates: sum(#2)                            │
+│ 72 rows                                    0µs │
+╰────────────────────────┒┎──────────────────────╯
+╭─ Projection ───────────┚┖──────────────────────╮
+│ Projections: month, category, revenue          │
+│ 2,130 rows                                 0µs │
+╰────────────────────────┒┎──────────────────────╯
+╭─ Projection ───────────┚┖──────────────────────╮
+│ Projections:                                   │
+│ #0, __internal_compress_string_uhugeint(#1),   │
+│ #2                                             │
+│ 2,130 rows                                 0µs │
+╰────────────────────────┒┎──────────────────────╯
+╭─ Table Scan ───────────┚┖──────────────────────╮
+│ Table: "large".main.agg_daily_category_revenue │
+│ Type: Sequential Scan                          │
+│ Projections: order_date, category, revenue     │
+│ Row Groups Scanned: 1 / 1                      │
+│ 2,130 rows                                 0µs │
+╰────────────────────────────────────────────────╯

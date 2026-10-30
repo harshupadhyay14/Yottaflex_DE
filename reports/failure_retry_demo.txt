@@ -1,0 +1,137 @@
+$ run with simulated crash after orders 
+2026-10-30 23:27:57,313 INFO [run_20261030T175757Z_c89bc1dc] read customers: 102 rows, 0 malformed
+2026-10-30 23:27:57,313 INFO [run_20261030T175757Z_c89bc1dc] read products: 21 rows, 0 malformed
+2026-10-30 23:27:57,318 INFO [run_20261030T175757Z_c89bc1dc] read orders: 1025 rows, 2 malformed
+2026-10-30 23:27:57,332 INFO [run_20261030T175757Z_c89bc1dc] read order_items: 2946 rows, 3 malformed
+2026-10-30 23:27:57,413 INFO [run_20261030T175757Z_c89bc1dc] published customers: {'inserted_rows': 98, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 0, 'input_rows': 102, 'malformed_rows': 0, 'rejected_rows': 4, 'accepted_rows': 98}
+2026-10-30 23:27:57,419 INFO [run_20261030T175757Z_c89bc1dc] published products: {'inserted_rows': 18, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 0, 'input_rows': 21, 'malformed_rows': 0, 'rejected_rows': 3, 'accepted_rows': 18}
+2026-10-30 23:27:57,445 INFO [run_20261030T175757Z_c89bc1dc] published orders: {'inserted_rows': 984, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 1004, 'input_rows': 1025, 'malformed_rows': 2, 'rejected_rows': 19, 'accepted_rows': 1004}
+2026-10-30 23:27:57,447 ERROR [run_20261030T175757Z_c89bc1dc] FAILED: InjectedFailure: simulated failure after publishing orders
+2026-10-30 23:27:57,455 INFO [run_20261030T175757Z_c89bc1dc] failed in 0.24s
+{
+  "run_id": "run_20261030T175757Z_c89bc1dc",
+  "input_hash": "c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7",
+  "started_at": "2026-10-30T17:57:57.202181",
+  "as_of": "2026-01-01 00:00:00",
+  "status": "failed",
+  "tables": {
+    "customers": {
+      "inserted_rows": 98,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 102,
+      "malformed_rows": 0,
+      "rejected_rows": 4,
+      "accepted_rows": 98
+    },
+    "products": {
+      "inserted_rows": 18,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 21,
+      "malformed_rows": 0,
+      "rejected_rows": 3,
+      "accepted_rows": 18
+    },
+    "orders": {
+      "inserted_rows": 984,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 1004,
+      "input_rows": 1025,
+      "malformed_rows": 2,
+      "rejected_rows": 19,
+      "accepted_rows": 1004
+    }
+  },
+  "warnings": [],
+  "failure_reason": "InjectedFailure: simulated failure after publishing orders",
+  "ended_at": "2026-10-30T17:57:57.447038",
+  "duration_s": 0.245
+}
+  
+$ retry same input 
+2026-10-30 23:27:58,679 INFO [run_20261030T175758Z_c89bc1dc] read customers: 102 rows, 0 malformed
+2026-10-30 23:27:58,680 INFO [run_20261030T175758Z_c89bc1dc] read products: 21 rows, 0 malformed
+2026-10-30 23:27:58,685 INFO [run_20261030T175758Z_c89bc1dc] read orders: 1025 rows, 2 malformed
+2026-10-30 23:27:58,695 INFO [run_20261030T175758Z_c89bc1dc] read order_items: 2946 rows, 3 malformed
+2026-10-30 23:27:58,771 INFO [run_20261030T175758Z_c89bc1dc] published customers: {'inserted_rows': 98, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 0, 'input_rows': 102, 'malformed_rows': 0, 'rejected_rows': 4, 'accepted_rows': 98}
+2026-10-30 23:27:58,781 INFO [run_20261030T175758Z_c89bc1dc] published products: {'inserted_rows': 18, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 0, 'input_rows': 21, 'malformed_rows': 0, 'rejected_rows': 3, 'accepted_rows': 18}
+2026-10-30 23:27:58,802 INFO [run_20261030T175758Z_c89bc1dc] published orders: {'inserted_rows': 984, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 1004, 'input_rows': 1025, 'malformed_rows': 2, 'rejected_rows': 19, 'accepted_rows': 1004}
+2026-10-30 23:27:58,814 INFO [run_20261030T175758Z_c89bc1dc] published order_items: {'inserted_rows': 2872, 'updated_rows': 0, 'unchanged_rows': 0, 'stale_skipped_rows': 0, 'history_added_rows': 0, 'input_rows': 2946, 'malformed_rows': 3, 'rejected_rows': 71, 'accepted_rows': 2872}
+2026-10-30 23:27:58,837 INFO [run_20261030T175758Z_c89bc1dc] success in 0.21s
+{
+  "run_id": "run_20261030T175758Z_c89bc1dc",
+  "input_hash": "c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7",
+  "started_at": "2026-10-30T17:57:58.618969",
+  "as_of": "2026-01-01 00:00:00",
+  "status": "success",
+  "tables": {
+    "customers": {
+      "inserted_rows": 98,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 102,
+      "malformed_rows": 0,
+      "rejected_rows": 4,
+      "accepted_rows": 98
+    },
+    "products": {
+      "inserted_rows": 18,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 21,
+      "malformed_rows": 0,
+      "rejected_rows": 3,
+      "accepted_rows": 18
+    },
+    "orders": {
+      "inserted_rows": 984,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 1004,
+      "input_rows": 1025,
+      "malformed_rows": 2,
+      "rejected_rows": 19,
+      "accepted_rows": 1004
+    },
+    "order_items": {
+      "inserted_rows": 2872,
+      "updated_rows": 0,
+      "unchanged_rows": 0,
+      "stale_skipped_rows": 0,
+      "history_added_rows": 0,
+      "input_rows": 2946,
+      "malformed_rows": 3,
+      "rejected_rows": 71,
+      "accepted_rows": 2872
+    }
+  },
+  "warnings": [],
+  "failure_reason": null,
+  "ended_at": "2026-10-30T17:57:58.831660",
+  "duration_s": 0.213
+}
+  
+$ rerun same input without --force 
+2026-10-30 23:28:00,143 INFO [run_20261030T175800Z_c89bc1dc] input already loaded (hash c89bc1dc) - skipped
+{
+  "run_id": "run_20261030T175800Z_c89bc1dc",
+  "input_hash": "c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7",
+  "started_at": "2026-10-30T17:58:00.088598",
+  "as_of": "2026-01-01 00:00:00",
+  "status": "skipped_duplicate_input",
+  "tables": {},
+  "warnings": [],
+  "failure_reason": null
+}

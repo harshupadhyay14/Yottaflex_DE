@@ -1,0 +1,40 @@
+╭─ Summary ───────────╮
+│ Total Time: 0.0128s │
+╰─────────────────────╯
+╭─ Projection ───────────────────────────╮
+│ Projections:                           │
+│ __internal_decompress_string(#0)       │
+│ 1,925 rows                         0µs │
+╰────────────────────┬───────────────────╯
+╭─ Order By ─────────┴───────────────────╮
+│ Order By: customer_id ASC              │
+│ 1,925 rows                         0µs │
+╰────────────────────┬───────────────────╯
+╭─ Projection ───────┴───────────────────╮
+│ Projections:                           │
+│ __internal_compress_string_ubigint(#0) │
+│ 1,925 rows                         0µs │
+╰────────────────────┬───────────────────╯
+╭─ Projection ───────┴───────────────────╮
+│ Projections: #0                        │
+│ 1,925 rows                         0µs │
+╰────────────────────┬───────────────────╯
+╭─ Filter ───────────┴───────────────────╮
+│ Expression: NOT SUBQUERY               │
+│ 1,925 rows                         0µs │
+╰────────────────────┰───────────────────╯
+╭─ Hash Join ────────┸───────────────────╮
+│ Join Type: MARK                        │
+│ Conditions: customer_id = #0           │
+│ 19,600 rows                        0µs │
+╰────────────────────┬───────────────────╯
+                     ┟────────────────────────────────────────────┰┒
+╭─ Table Scan ───────┸───────────────────╮  ╭─ Table Scan ────────┚┖───────────────────╮
+│ Table: "large".main.customers          │  │ Table: "large".main.orders               │
+│ Type: Sequential Scan                  │  │ Type: Sequential Scan                    │
+│ Projections: customer_id               │  │ Projections: customer_id                 │
+│ Row Groups Scanned: 1 / 1              │  │ Filters:                                 │
+│ 19,600 rows                        0µs │  │ strftime(order_ts, '%Y-%m') >= '2025-10' │
+╰────────────────────────────────────────╯  │ Row Groups Scanned: 2 / 2                │
+                                            │ 45,544 rows                       10.0ms │
+                                            ╰──────────────────────────────────────────╯

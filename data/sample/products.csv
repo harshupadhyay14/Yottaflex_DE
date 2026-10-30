@@ -1,0 +1,22 @@
+product_id,name,category,unit_price
+P00000,Product 0,storage,473.69
+P00001,Product 1,video,136.20
+P00002,Product 2,wearables,214.45
+P00003,Product 3,video,464.81
+P00004,Product 4,networking,346.48
+P00005,Product 5,networking,159.30
+P00006,Product 6,networking,326.69
+P00007,Product 7,,450.31
+P00008,Product 8,storage,64.90
+P00009,Product 9,video,36.69
+P00010,Product 10,audio,296.21
+P00011,Product 11,video,296.28
+P00012,Product 12,audio,40.14
+P00013,Product 13,networking,34.14
+P00014,Product 14,audio,453.18
+P00015,Product 15,accessories,40.07
+P00016,Product 16,video,-1.00
+P00017,Product 17,storage,111.05
+P00018,Product 18,video,363.06
+P00019,Product 19,wearables,290.22
+P00014,Product 14,audio,453.18

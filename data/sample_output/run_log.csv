@@ -1,0 +1,4 @@
+run_id,input_hash,status,started_at,ended_at,as_of,input_rows,accepted_rows,rejected_rows,failure_reason,notes
+run_20261029T191631Z_c89bc1dc,c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7,failed,2026-10-29 19:16:31.873589,2026-10-29 19:16:32.078299,2026-01-01 00:00:00,,,,InjectedFailure: simulated failure after publishing orders,
+run_20261029T191632Z_c89bc1dc,c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7,success,2026-10-29 19:16:32.555472,2026-10-29 19:16:32.750456,2026-01-01 00:00:00,4094,3992,102,,
+run_20261029T191633Z_c89bc1dc,c89bc1dce7396688ac483314305ea68650d90f9ff0aa12599d63c0a6039c3cc7,skipped_duplicate_input,2026-10-29 19:16:33.265194,2026-10-29 19:16:33.294384,2026-01-01 00:00:00,,,,,same input already loaded; use --force to reprocess

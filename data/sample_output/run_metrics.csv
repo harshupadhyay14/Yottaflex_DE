@@ -1,0 +1,5 @@
+run_id,table_name,input_rows,malformed_rows,rejected_rows,accepted_rows,inserted_rows,updated_rows,unchanged_rows,stale_skipped_rows,history_added_rows
+run_20261029T191632Z_c89bc1dc,customers,102,0,4,98,98,0,0,0,0
+run_20261029T191632Z_c89bc1dc,products,21,0,3,18,18,0,0,0,0
+run_20261029T191632Z_c89bc1dc,orders,1025,2,19,1004,984,0,0,0,1004
+run_20261029T191632Z_c89bc1dc,order_items,2946,3,71,2872,2872,0,0,0,0

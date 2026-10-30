@@ -1,0 +1,103 @@
+run_id,reject_id,table_name,source_file,source_row,reason,raw_record,rejected_at
+run_20261029T191632Z_c89bc1dc,8d3515ce563fc442,customers,customers.csv,18,duplicate_key,"[""C000016"", ""Customer 16"", ""user16@example.com"", ""AE"", ""2023-09-22T06:43:45Z""]",2026-10-29 19:16:32.688643
+run_20261029T191632Z_c89bc1dc,46762b6b50888da8,customers,customers.csv,87,duplicate_key,"[""C000085"", ""Customer 85"", ""user85@example.com"", ""FR"", ""2024-10-15T17:51:13Z""]",2026-10-29 19:16:32.688643
+run_20261029T191632Z_c89bc1dc,38953258c5217436,customers,customers.csv,101,invalid_country,"[""C000099"", ""Customer 99"", ""user99@example.com"", ""India"", ""2024-08-13T18:39:07Z""]",2026-10-29 19:16:32.688643
+run_20261029T191632Z_c89bc1dc,3e4cf7819393b697,customers,customers.csv,70,missing_email,"[""C000068"", ""Customer 68"", """", ""GB"", ""2024-09-07T05:25:46Z""]",2026-10-29 19:16:32.688643
+run_20261029T191632Z_c89bc1dc,48f51124c8aaa2c2,products,products.csv,18,invalid_unit_price,"[""P00016"", ""Product 16"", ""video"", ""-1.00""]",2026-10-29 19:16:32.695942
+run_20261029T191632Z_c89bc1dc,a3930e4e85c2ff99,products,products.csv,9,missing_category,"[""P00007"", ""Product 7"", """", ""450.31""]",2026-10-29 19:16:32.695942
+run_20261029T191632Z_c89bc1dc,5a651e5704357098,products,products.csv,16,duplicate_key,"[""P00014"", ""Product 14"", ""audio"", ""453.18""]",2026-10-29 19:16:32.695942
+run_20261029T191632Z_c89bc1dc,a477fc1ba22e718f,orders,orders.csv,321,invalid_customer_ref,"[""O0000315"", ""C999999"", ""2025-10-15T18:19:55Z"", ""completed"", ""2025-10-15T19:53:55Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,559734d8ddb46dcf,orders,orders.csv,235,future_order_ts,"[""O0000230"", ""C000063"", ""2099-01-01T00:00:00Z"", ""completed"", ""2025-08-30T02:05:09Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,ee550c59bc03d0ed,orders,orders.csv,753,invalid_customer_ref,"[""O0000734"", ""C999999"", ""2025-08-27T15:24:38Z"", ""completed"", ""2025-08-27T17:42:38Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,8e2b1ff7c6922593,orders,orders.csv,289,missing_customer_id,"[""O0000284"", """", ""2025-07-04T22:56:02Z"", ""completed"", ""2025-07-05T07:42:02Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,57fb19ee2bb243cf,orders,orders.csv,484,duplicate_key,"[""O0000476"", ""C000088"", ""2025-04-06T02:25:39Z"", ""completed"", ""2025-04-06T09:21:39Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,80eb45b4a4ecaebc,orders,orders.csv,640,invalid_order_ts,"[""O0000626"", ""C000053"", ""2025-13-45T99:00:00Z"", ""completed"", ""2025-08-16T00:37:18Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,51df9bd1371244b6,orders,orders.csv,994,invalid_customer_ref,"[""O0000972"", ""C999999"", ""2025-12-03T21:27:19Z"", ""completed"", ""2025-12-04T04:28:19Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,ca4144a28e8fe7f9,orders,orders.csv,907,duplicate_key,"[""O0000885"", ""C000071"", ""2025-07-13T18:00:24Z"", ""completed"", ""2025-07-14T02:11:24Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,9bd8f13aa15569d9,orders,orders.csv,264,future_order_ts,"[""O0000259"", ""C000072"", ""2099-01-01T00:00:00Z"", ""completed"", ""2025-08-29T20:11:43Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,354d20c7b0e2cf6f,orders,orders.csv,396,duplicate_key,"[""O0000390"", ""C000018"", ""2025-06-24T11:57:31Z"", ""cancelled"", ""2025-06-24T19:25:31Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,432a31764c84e55f,orders,orders.csv,680,missing_customer_id,"[""O0000664"", """", ""2025-10-28T10:03:15Z"", ""shipped"", ""2025-10-28T14:43:15Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,540bb96267903b67,orders,orders.csv,839,invalid_status,"[""O0000820"", ""C000094"", ""2025-05-01T10:59:21Z"", ""teleported"", ""2025-05-01T15:04:21Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,f0f8a9700cea1f9b,orders,orders.csv,11,invalid_status,"[""O0000008"", ""C000070"", ""2025-01-20T15:31:02Z"", ""teleported"", ""2025-01-20T15:47:02Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,e784de9861f361d6,orders,orders.csv,1019,invalid_customer_ref,"[""O0000997"", ""C999999"", ""2025-09-09T10:01:04Z"", ""paid"", ""2025-09-09T14:37:04Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,8d79bc57b9b2ddeb,orders,orders.csv,750,invalid_customer_ref,"[""O0000731"", ""C999999"", ""2025-09-06T04:55:25Z"", ""shipped"", ""2025-09-06T11:37:25Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,19efd152541f74d7,orders,orders.csv,848,invalid_order_ts,"[""O0000829"", ""C000067"", ""2025-13-45T99:00:00Z"", ""completed"", ""2025-11-10T11:53:25Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,614322fdeb489ddb,orders,orders.csv,266,duplicate_key,"[""O0000261"", ""C000084"", ""2025-12-20T04:06:25Z"", ""completed"", ""2025-12-20T11:05:25Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,2d11e776f17a12e6,orders,orders.csv,368,duplicate_key,"[""O0000362"", ""C000042"", ""2025-11-03T12:07:41Z"", ""completed"", ""2025-11-03T13:15:41Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,a90defb6f1607872,orders,orders.csv,628,invalid_status,"[""O0000615"", ""C000042"", ""2025-03-26T06:44:26Z"", ""teleported"", ""2025-03-26T11:55:26Z""]",2026-10-29 19:16:32.715627
+run_20261029T191632Z_c89bc1dc,5446a4e9d794bec6,orders,orders.csv,446,malformed_row_field_count,"[""O0000438"", ""C000030"", ""2025-01-14T12:20:59Z"", ""paid"", ""2025-01-14T18:36:59Z"", ""junk""]",2026-10-29 19:16:32.717247
+run_20261029T191632Z_c89bc1dc,45c2b0ea4f5655ce,orders,orders.csv,950,malformed_row_field_count,"[""O0000928"", ""C000021"", ""2025-10-12T12:10:56Z"", ""completed"", ""2025-10-12T19:14:56Z"", ""junk""]",2026-10-29 19:16:32.717267
+run_20261029T191632Z_c89bc1dc,891730599535a058,order_items,order_items.csv,372,invalid_quantity,"[""I00000370"", ""O0000128"", ""P00017"", ""-3"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,151f7ffe1e02b29f,order_items,order_items.csv,1277,invalid_order_ref,"[""I00001275"", ""O0000438"", ""P00019"", ""5"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,6b168f881fba68a6,order_items,order_items.csv,1278,invalid_order_ref,"[""I00001276"", ""O0000438"", ""P00006"", ""1"", ""326.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,55d7e9ab4df55516,order_items,order_items.csv,1967,parent_order_rejected,"[""I00001965"", ""O0000664"", ""P00000"", ""5"", ""473.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,4176efb9d1e1d186,order_items,order_items.csv,2163,parent_order_rejected,"[""I00002161"", ""O0000731"", ""P00012"", ""5"", ""40.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e90b89287b1293eb,order_items,order_items.csv,2164,parent_order_rejected,"[""I00002162"", ""O0000731"", ""P00017"", ""4"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,9791a573c1563bf0,order_items,order_items.csv,2374,invalid_product_ref,"[""I00002372"", ""O0000806"", ""P99999"", ""4"", ""34.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,9a22469bb63ca5ce,order_items,order_items.csv,2598,duplicate_key,"[""I00002596"", ""O0000875"", ""P00002"", ""3"", ""214.45""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,9baaf6c99bfbb63f,order_items,order_items.csv,2618,duplicate_key,"[""I00002616"", ""O0000883"", ""P00014"", ""4"", ""453.18""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,cedd56babef6bea7,order_items,order_items.csv,851,parent_order_rejected,"[""I00000849"", ""O0000284"", ""P00004"", ""2"", ""346.48""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,8102b200c10b1903,order_items,order_items.csv,1564,duplicate_key,"[""I00001562"", ""O0000535"", ""P00017"", ""2"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,eebce17264d71745,order_items,order_items.csv,2931,parent_order_rejected,"[""I00002929"", ""O0000997"", ""P00002"", ""2"", ""214.45""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e47062eb32704fc2,order_items,order_items.csv,1070,invalid_product_ref,"[""I00001068"", ""O0000355"", ""P99999"", ""5"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,b0ddd434d391bd13,order_items,order_items.csv,1845,duplicate_key,"[""I00001843"", ""O0000623"", ""P00005"", ""1"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,bdc9b69810541b5a,order_items,order_items.csv,693,parent_order_rejected,"[""I00000691"", ""O0000230"", ""P00000"", ""3"", ""473.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fd15367406999916,order_items,order_items.csv,1315,duplicate_key,"[""I00001313"", ""O0000448"", ""P00014"", ""5"", ""453.18""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fe04d864d8f4bfe3,order_items,order_items.csv,773,parent_order_rejected,"[""I00000771"", ""O0000259"", ""P00000"", ""3"", ""473.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e3e14c3f33bb8560,order_items,order_items.csv,847,parent_order_rejected,"[""I00000845"", ""O0000284"", ""P00005"", ""4"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,f215f0b1a1354be6,order_items,order_items.csv,1820,parent_order_rejected,"[""I00001818"", ""O0000615"", ""P00012"", ""4"", ""40.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,b4d146a7dc5ca4a0,order_items,order_items.csv,1913,invalid_quantity,"[""I00001911"", ""O0000646"", ""P00019"", ""-3"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e8bd2fae08df2e7a,order_items,order_items.csv,1964,invalid_quantity,"[""I00001962"", ""O0000663"", ""P00001"", ""abc"", ""136.20""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,1f7c151b7e48d545,order_items,order_items.csv,2175,parent_order_rejected,"[""I00002173"", ""O0000734"", ""P00010"", ""4"", ""296.21""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,19393dbd05dc9d7a,order_items,order_items.csv,539,duplicate_key,"[""I00000537"", ""O0000180"", ""P00004"", ""1"", ""346.48""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,1c88925ddbf47f89,order_items,order_items.csv,771,parent_order_rejected,"[""I00000769"", ""O0000259"", ""P00011"", ""4"", ""296.28""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,2d628dc296c0c130,order_items,order_items.csv,2867,parent_order_rejected,"[""I00002865"", ""O0000972"", ""P00014"", ""3"", ""453.18""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,b3b18fdeb45a4f78,order_items,order_items.csv,516,invalid_product_ref,"[""I00000514"", ""O0000173"", ""P99999"", ""4"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,adcca4b4a5a2a668,order_items,order_items.csv,2147,duplicate_key,"[""I00002145"", ""O0000727"", ""P00004"", ""2"", ""346.48""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,a6bf7319f7c0242f,order_items,order_items.csv,2161,parent_order_rejected,"[""I00002159"", ""O0000731"", ""P00018"", ""4"", ""363.06""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,2832f6ef5c71f950,order_items,order_items.csv,2162,parent_order_rejected,"[""I00002160"", ""O0000731"", ""P00005"", ""3"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,5ee1d2e64eb40488,order_items,order_items.csv,2398,invalid_quantity,"[""I00002396"", ""O0000814"", ""P00009"", ""10001"", ""36.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,041f9720b03c9dea,order_items,order_items.csv,2712,invalid_product_ref,"[""I00002710"", ""O0000916"", ""P99999"", ""5"", ""136.20""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,12d009550c5b5474,order_items,order_items.csv,1853,parent_order_rejected,"[""I00001851"", ""O0000626"", ""P00008"", ""4"", ""64.90""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,c625c62d6da8bcfe,order_items,order_items.csv,1968,parent_order_rejected,"[""I00001966"", ""O0000664"", ""P00011"", ""4"", ""296.28""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,92af83bfabb31a92,order_items,order_items.csv,23,parent_order_rejected,"[""I00000021"", ""O0000008"", ""P00014"", ""1"", ""453.18""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,212f05f195c3be31,order_items,order_items.csv,850,parent_order_rejected,"[""I00000848"", ""O0000284"", ""P00011"", ""5"", ""296.28""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,d3532d38e50a21c4,order_items,order_items.csv,1469,missing_quantity,"[""I00001467"", ""O0000504"", ""P00014"", """", ""453.18""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fddb44c7e28f06a6,order_items,order_items.csv,1966,parent_order_rejected,"[""I00001964"", ""O0000664"", ""P00005"", ""4"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,9227dcde8de30ab5,order_items,order_items.csv,2744,invalid_order_ref,"[""I00002742"", ""O0000928"", ""P00003"", ""4"", ""464.81""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,a5bab10d17f00cef,order_items,order_items.csv,772,parent_order_rejected,"[""I00000770"", ""O0000259"", ""P00013"", ""2"", ""34.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,2f03cb0734b61717,order_items,order_items.csv,849,parent_order_rejected,"[""I00000847"", ""O0000284"", ""P00001"", ""2"", ""136.20""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,9383b5c1e80ce878,order_items,order_items.csv,1279,invalid_order_ref,"[""I00001277"", ""O0000438"", ""P00011"", ""1"", ""296.28""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,df3b5d3ae7870e37,order_items,order_items.csv,1510,invalid_quantity,"[""I00001508"", ""O0000519"", ""P00017"", ""0"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,f903151754357a70,order_items,order_items.csv,1969,parent_order_rejected,"[""I00001967"", ""O0000664"", ""P00009"", ""1"", ""36.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,a995de2aaf952680,order_items,order_items.csv,2037,invalid_product_ref,"[""I00002035"", ""O0000688"", ""P99999"", ""3"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,b247fc5e78cb419d,order_items,order_items.csv,692,parent_order_rejected,"[""I00000690"", ""O0000230"", ""P00006"", ""3"", ""326.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,41cb052ca16cdbfe,order_items,order_items.csv,848,parent_order_rejected,"[""I00000846"", ""O0000284"", ""P00019"", ""4"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,1c728de09f0dddf8,order_items,order_items.csv,1536,duplicate_key,"[""I00001534"", ""O0000528"", ""P00000"", ""3"", ""473.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,743d9c229837bbf4,order_items,order_items.csv,1821,parent_order_rejected,"[""I00001819"", ""O0000615"", ""P00005"", ""5"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,221f023419d2aa43,order_items,order_items.csv,2174,parent_order_rejected,"[""I00002172"", ""O0000734"", ""P00004"", ""1"", ""346.48""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,a7e1bbfa3374d198,order_items,order_items.csv,1075,invalid_quantity,"[""I00001073"", ""O0000359"", ""P00009"", ""10001"", ""36.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,d707cd133bced68f,order_items,order_items.csv,2445,parent_order_rejected,"[""I00002443"", ""O0000829"", ""P00015"", ""4"", ""40.07""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fa384f9427207d8f,order_items,order_items.csv,22,parent_order_rejected,"[""I00000020"", ""O0000008"", ""P00018"", ""3"", ""363.06""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,18b90b676bc0ec11,order_items,order_items.csv,169,invalid_product_ref,"[""I00000167"", ""O0000056"", ""P99999"", ""3"", ""34.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,384fdf7613826ef2,order_items,order_items.csv,742,invalid_quantity,"[""I00000740"", ""O0000248"", ""P00012"", ""abc"", ""40.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,c1688c8a58cb5851,order_items,order_items.csv,1819,parent_order_rejected,"[""I00001817"", ""O0000615"", ""P00013"", ""4"", ""34.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,2dbb2410612bfb4d,order_items,order_items.csv,1841,invalid_product_ref,"[""I00001839"", ""O0000622"", ""P99999"", ""4"", ""40.07""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,00366fd00fbed9b2,order_items,order_items.csv,2173,parent_order_rejected,"[""I00002171"", ""O0000734"", ""P00019"", ""1"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,ce579531eaf4be6f,order_items,order_items.csv,2423,parent_order_rejected,"[""I00002421"", ""O0000820"", ""P00001"", ""2"", ""136.20""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,52360dee60fdd462,order_items,order_items.csv,20,parent_order_rejected,"[""I00000018"", ""O0000008"", ""P00006"", ""5"", ""326.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e9b44c428a9981ff,order_items,order_items.csv,21,parent_order_rejected,"[""I00000019"", ""O0000008"", ""P00003"", ""4"", ""464.81""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,4635cd6283d61e80,order_items,order_items.csv,954,parent_order_rejected,"[""I00000952"", ""O0000315"", ""P00010"", ""3"", ""296.21""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,e1e351cb15d1b072,order_items,order_items.csv,955,parent_order_rejected,"[""I00000953"", ""O0000315"", ""P00019"", ""3"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,258baa8cf4d8fbf0,order_items,order_items.csv,2742,invalid_order_ref,"[""I00002740"", ""O0000928"", ""P00019"", ""3"", ""290.22""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,77399cc517d55193,order_items,order_items.csv,2743,invalid_order_ref,"[""I00002741"", ""O0000928"", ""P00012"", ""4"", ""40.14""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fb92d8c88363cb34,order_items,order_items.csv,19,parent_order_rejected,"[""I00000017"", ""O0000008"", ""P00002"", ""4"", ""214.45""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,fae86f34a5da10c6,order_items,order_items.csv,1516,invalid_product_ref,"[""I00001514"", ""O0000521"", ""P99999"", ""4"", ""36.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,c5839e808d015e73,order_items,order_items.csv,2422,parent_order_rejected,"[""I00002420"", ""O0000820"", ""P00005"", ""2"", ""159.30""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,6ed376c7f3f5242c,order_items,order_items.csv,2851,duplicate_key,"[""I00002849"", ""O0000967"", ""P00008"", ""4"", ""64.90""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,74ffa05d7d348b62,order_items,order_items.csv,2932,parent_order_rejected,"[""I00002930"", ""O0000997"", ""P00017"", ""1"", ""111.05""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,66cd5d6ceb10f3f2,order_items,order_items.csv,298,invalid_quantity,"[""I00000296"", ""O0000105"", ""P00004"", ""0"", ""346.48""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,1b264b10cc6995c6,order_items,order_items.csv,584,invalid_product_ref,"[""I00000582"", ""O0000193"", ""P99999"", ""2"", ""473.69""]",2026-10-29 19:16:32.729669
+run_20261029T191632Z_c89bc1dc,2e256e138787f13a,order_items,order_items.csv,1201,malformed_row_field_count,"[""I00001199"", ""O0000409"", ""P00004"", ""2""]",2026-10-29 19:16:32.731339
+run_20261029T191632Z_c89bc1dc,e9b207e34be30c56,order_items,order_items.csv,1675,malformed_row_field_count,"[""I00001673"", ""O0000569"", ""P00003"", ""5""]",2026-10-29 19:16:32.731354
+run_20261029T191632Z_c89bc1dc,507b2ec729680f4d,order_items,order_items.csv,1708,malformed_row_field_count,"[""I00001706"", ""O0000578"", ""P00017"", ""1""]",2026-10-29 19:16:32.731369

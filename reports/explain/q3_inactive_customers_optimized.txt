@@ -1,0 +1,33 @@
+╭─ Summary ───────────╮
+│ Total Time: 0.0058s │
+╰─────────────────────╯
+╭─ Projection ─────────────────────────────────╮
+│ Projections:                                 │
+│ __internal_decompress_string(#0)             │
+│ 1,925 rows                               0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Order By ────────────┴──────────────────────╮
+│ Order By: customer_id ASC                    │
+│ 1,925 rows                               0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Projection ──────────┴──────────────────────╮
+│ Projections:                                 │
+│ __internal_compress_string_ubigint(#0)       │
+│ 1,925 rows                               0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Hash Join ───────────┴──────────────────────╮
+│ Join Type: RIGHT_ANTI                        │
+│ Conditions:                                  │
+│ customer_id IS NOT DISTINCT FROM customer_id │
+│ 1,925 rows                               0µs │
+╰───────────────────────┰┰─────────────────────╯
+                        ┃┠────────────────────────────────────────┒
+╭─ Table Scan ──────────┚┖─────────────────────╮  ╭─ Table Scan ──┸───────────────╮
+│ Table: "large".main.orders                   │  │ Table: "large".main.customers │
+│ Type: Sequential Scan                        │  │ Type: Sequential Scan         │
+│ Projections: customer_id                     │  │ Projections: customer_id      │
+│ Filters:                                     │  │ Row Groups Scanned: 1 / 1     │
+│ order_ts >= '2025-10-01 00:00:00'::TIMESTAMP │  │ 19,600 rows               0µs │
+│ Row Groups Scanned: 2 / 2                    │  ╰───────────────────────────────╯
+│ 45,544 rows                              0µs │
+╰──────────────────────────────────────────────╯

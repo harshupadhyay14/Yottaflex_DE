@@ -1,0 +1,65 @@
+╭─ Summary ───────────╮
+│ Total Time: 0.0547s │
+╰─────────────────────╯
+╭─ Projection ──────────────────────────────────╮
+│ Projections:                                  │
+│ #0, __internal_decompress_string(#1), #2      │
+│ 72 rows                                   0µs │
+╰───────────────────────┬───────────────────────╯
+╭─ Order By ────────────┴───────────────────────╮
+│ Order By: month ASC, category ASC             │
+│ 72 rows                                   0µs │
+╰───────────────────────┬───────────────────────╯
+╭─ Projection ──────────┴───────────────────────╮
+│ Projections:                                  │
+│ #0, __internal_compress_string_uhugeint(#1),  │
+│ #2                                            │
+│ 72 rows                                   0µs │
+╰───────────────────────┬───────────────────────╯
+╭─ Projection ──────────┴───────────────────────╮
+│ Projections:                                  │
+│ #0, __internal_decompress_string(#1), #2      │
+│ 72 rows                                   0µs │
+╰───────────────────────┬───────────────────────╯
+╭─ Hash Group By ───────┴───────────────────────╮
+│ Groups: #0, #1                                │
+│ Aggregates: sum(#2)                           │
+│ 72 rows                                10.0ms │
+╰───────────────────────┰───────────────────────╯
+╭─ Projection ──────────┸───────────────────────╮
+│ Projections:                                  │
+│ month, category,                              │
+│ CAST(quantity AS DECIMAL(18,0)) * unit_price  │
+│ 293,781 rows                           20.0ms │
+╰───────────────────────┰───────────────────────╯
+╭─ Projection ──────────┸───────────────────────╮
+│ Projections:                                  │
+│ #2, #0, #1,                                   │
+│ __internal_compress_string_uhugeint(#3)       │
+│ 293,781 rows                              0µs │
+╰───────────────────────┰───────────────────────╯
+╭─ Hash Join ───────────┸───────────────────────╮
+│ Join Type: INNER                              │
+│ Conditions: product_id = product_id           │
+│ 293,781 rows                              0µs │
+╰───────────────────────┬───────────────────────╯
+                        ┟────────────────────────────────────────────────────────────────────────────────────╮
+╭─ Hash Join ───────────┸───────────────────────╮                                            ╭─ Table Scan ──┴──────────────╮
+│ Join Type: INNER                              │                                            │ Table: "large".main.products │
+│ Conditions: order_id = order_id               │                                            │ Type: Sequential Scan        │
+│ 293,781 rows                           50.0ms │                                            │ Projections: product_id,     │
+╰───────────────────────┰┰──────────────────────╯                                            │              category        │
+                        ┃┠─────────────────────────────────────────────╮                     │ Row Groups Scanned: 1 / 1    │
+╭─ Table Scan ──────────┚┖──────────────────────╮  ╭─ Filter ──────────┴──────────────────╮  │ 980 rows                 0µs │
+│ Table: "large".main.order_items               │  │ Expression:                          │  ╰──────────────────────────────╯
+│ Type: Sequential Scan                         │  │ strftime(order_ts, '%Y') = '2025'    │
+│ Projections: order_id, product_id, quantity,  │  │ 98,594 rows                      0µs │
+│              unit_price                       │  ╰───────────────────┬──────────────────╯
+│ Dynamic Filters:                              │  ╭─ Table Scan ──────┴──────────────────╮
+│ optional: order_id IN PRF(order_id),          │  │ Table: "large".main.orders           │
+│ optional: product_id IN PRF(product_id)       │  │ Type: Sequential Scan                │
+│ Row Groups Scanned: 5 / 5                     │  │ Projections: order_id, order_ts      │
+│ 586,109 rows                           30.0ms │  │ Filters: lower(status) = 'completed' │
+╰───────────────────────────────────────────────╯  │ Row Groups Scanned: 2 / 2            │
+                                                   │ 98,594 rows                      0µs │
+                                                   ╰──────────────────────────────────────╯

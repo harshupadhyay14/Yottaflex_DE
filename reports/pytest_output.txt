@@ -1,0 +1,29 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-9.2.0, pluggy-1.7.0 -- D:\Projects 2\Yottaflex_DE\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Projects 2\Yottaflex_DE
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 19 items
+
+tests/test_pipeline.py::test_happy_path_loads_everything_and_reconciles PASSED [  5%]
+tests/test_pipeline.py::test_empty_batch_header_only_and_zero_byte PASSED [ 10%]
+tests/test_pipeline.py::test_missing_input_file_fails_cleanly PASSED     [ 15%]
+tests/test_pipeline.py::test_malformed_rows_are_rejected_with_source_row PASSED [ 21%]
+tests/test_pipeline.py::test_bad_values_become_rejects_not_crashes PASSED [ 26%]
+tests/test_pipeline.py::test_missing_required_fields PASSED              [ 31%]
+tests/test_pipeline.py::test_duplicate_keys_last_row_wins_and_dup_is_traceable PASSED [ 36%]
+tests/test_pipeline.py::test_schema_change_missing_required_column_fails_and_loads_nothing PASSED [ 42%]
+tests/test_pipeline.py::test_schema_change_extra_and_reordered_columns_tolerated PASSED [ 47%]
+tests/test_pipeline.py::test_rerun_same_input_is_skipped_and_forced_rerun_changes_nothing PASSED [ 52%]
+tests/test_pipeline.py::test_partial_failure_rolls_back_and_retry_succeeds PASSED [ 57%]
+tests/test_pipeline.py::test_invalid_references_and_cascade PASSED       [ 63%]
+tests/test_pipeline.py::test_child_may_reference_parent_loaded_in_earlier_batch PASSED [ 68%]
+tests/test_pipeline.py::test_late_arriving_older_version_does_not_overwrite_current PASSED [ 73%]
+tests/test_pipeline.py::test_out_of_order_versions_within_one_file PASSED [ 78%]
+tests/test_pipeline.py::test_business_rule_boundaries PASSED             [ 84%]
+tests/test_pipeline.py::test_orders_with_same_version_twice_is_duplicate_event_not_new_version PASSED [ 89%]
+tests/test_pipeline.py::test_generator_is_reproducible PASSED            [ 94%]
+tests/test_pipeline.py::test_generated_data_matches_injected_labels_exactly PASSED [100%]
+
+============================= 19 passed in 7.83s ==============================

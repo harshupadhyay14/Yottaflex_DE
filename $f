@@ -1,0 +1,7 @@
+$ run with simulated crash after orders 
+D:\Projects 2\Yottaflex_DE\.venv\Scripts\python.exe: No module named yottaflex_de
+  
+$ retry same input 
+D:\Projects 2\Yottaflex_DE\.venv\Scripts\python.exe: No module named yottaflex_de
+  
+$ rerun same input without --force 

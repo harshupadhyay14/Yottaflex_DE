@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+output/
+data/large/
+*.duckdb
+*.duckdb.wal
+.venv/
+data/large_labels/
+.venv/
+data/large_labels/
